@@ -25,7 +25,7 @@ let section0 = SystemSection(rows: [row0_0]])
 section0.titleForHeader = "Basic"
     
 tableManager = TableManager(sections: [section0,section1])
-tableView.md_bindTo(manager: tableManager!)
+tableView.md_bindTo(manager: tableManager)
 ```
 
 And your tableView is ready.
@@ -53,7 +53,6 @@ And your tableView is ready.
 ```
 pod "MDTable"
 ```
-
 
 ## Useage
 
@@ -130,7 +129,6 @@ class CusomCellWithXib: SystemTableViewCell{
  		 //Render the cell 
     }
 }
-
 ```
 
 #### Magic happens
@@ -140,7 +138,6 @@ let row = CustomXibRow()
 let section = SystemSection(rows: row)
 tableManager = TableManager(sections: [section])
 tableView.md_bindTo(manager: tableManager)
-
 ```
 
 ## Author
