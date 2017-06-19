@@ -23,7 +23,8 @@ let row0_0 = SystemRow(title: "System Cell", accessoryType: .disclosureIndicator
 let row0_1 = SystemRow(title: "Custom Cell", accessoryType: .disclosureIndicator)
 let section0 = SystemSection(rows: [row0_0]])
 section0.titleForHeader = "Basic"
-    
+section0.heightForHeader = 30.0
+
 tableManager = TableManager(sections: [section0,section1])
 tableView.md_bindTo(manager: tableManager)
 ```
@@ -126,7 +127,7 @@ class CusomCellWithXib: SystemTableViewCell{
         guard let row = row as? CustomXibRow else{
             return;
         }
- 		 //Render the cell 
+        //Render the cell 
     }
 }
 ```
