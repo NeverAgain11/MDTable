@@ -21,7 +21,7 @@ MDTable is a **model driven framework**. Using MDTable, it is so easy to create 
 ```
 let row0_0 = SystemRow(title: "System Cell", accessoryType: .disclosureIndicator)
 let row0_1 = SystemRow(title: "Custom Cell", accessoryType: .disclosureIndicator)
-let section0 = SystemSection(rows: [row0_0]])
+let section0 = SystemSection(rows: [row0_0,row0_1]])
 section0.titleForHeader = "Basic"
 section0.heightForHeader = 30.0
 
