@@ -39,6 +39,7 @@ class MainTableViewController: UITableViewController {
             })
         }
         let section0 = SystemSection(rows: rows_0)
+        section0.heightForHeader = 30.0
         section0.titleForHeader = "Basic"
         
         //Section 1
@@ -58,6 +59,7 @@ class MainTableViewController: UITableViewController {
         }
         let section1 = SystemSection(rows: rows_1)
         section1.titleForHeader = "Advanced"
+        section1.heightForHeader = 30.0
 
         tableManager = TableManager(sections: [section0,section1])
         tableView.md_bindTo(manager: tableManager!)
