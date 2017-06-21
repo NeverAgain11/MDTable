@@ -14,9 +14,7 @@
 
 ## MDTables
 
-Are you tired of writing endless `UITableViewDataSource` and `UITableViewDelegate`?
-
-MDTable is a **model driven framework**. Using MDTable, it is so easy to create tableView.
+MDTable is a **model driven tableView framework**. 
 
 ```
 let row0_0 = SystemRow(title: "System Cell", accessoryType: .disclosureIndicator)
@@ -33,19 +31,13 @@ And your tableView is ready.
 
 <img src="./Screenshot/MainList.png" width="320">
 
+- [中文文档](./Documents/Chinese Document.md)
 
 ## Require
 
 - Xcode 8.1+
 - iOS 8.0+ 
 - Swift 3.0+
-
-## Communication
-
-- If you **found a bug**, open an **issue**.
-- If you have a **feature request**, open an **issue**.
-- If you want to **contribute**, submit a **pull request**.
-
 
 ## Install
 
