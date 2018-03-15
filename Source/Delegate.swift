@@ -37,10 +37,10 @@ public class TableDelegate: NSObject, UITableViewDataSource,UITableViewDelegate{
         let row = tableManager.row(at: indexPath)
         return row.didEndDisplaying(tableView, cell, indexPath)
     }
-    public func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let row = tableManager.row(at: indexPath)
-        return row.didEndDisplaying(tableView, cell, indexPath)
-    }
+//    public func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        let row = tableManager.row(at: indexPath)
+//        return row.didEndDisplaying(tableView, cell, indexPath)
+//    }
     public func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         let row = tableManager.row(at: indexPath)
         return row.accessoryButtonTappedForRowWith(tableView, indexPath)
