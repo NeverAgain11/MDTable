@@ -153,7 +153,7 @@ public class TableManager{
             return
         }
         var section = self.sections[indexPath.section]
-        if indexPath.row >= section.rows.count {
+        if indexPath.row > section.rows.count {
             return
         }
         section.rows.insert(content, at: indexPath.row)
