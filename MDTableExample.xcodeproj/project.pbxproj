@@ -349,7 +349,7 @@
 				TargetAttributes = {
 					B38D4D7D1EF26B46009A6D15 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = R7X999328A;
+						DevelopmentTeam = GPKU5PMUNS;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -593,7 +593,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = R7X999328A;
+				DEVELOPMENT_TEAM = GPKU5PMUNS;
 				INFOPLIST_FILE = MDTableExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -608,7 +608,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = R7X999328A;
+				DEVELOPMENT_TEAM = GPKU5PMUNS;
 				INFOPLIST_FILE = MDTableExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

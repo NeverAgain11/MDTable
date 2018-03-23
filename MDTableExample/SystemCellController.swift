@@ -61,8 +61,11 @@ class SystemCellController: UIViewController {
         }
         row4.reuseIdentifier = "Cell With Switch"
         let section = Section(rows: [row0,row1,row2,row3,row4])
-        section.heightForHeader = 10.0
-        section.heightForFooter = 0.0
+        section.estimatedHeightForHeader = 50
+        section.titleForHeader = "只是看看"
+        section.heightForHeader = section.estimatedHeightForHeader
+        section.heightForFooter = 5.0
+        
         return section
     }
 }

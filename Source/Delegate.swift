@@ -80,15 +80,17 @@ public class TableDelegate: NSObject, UITableViewDataSource,UITableViewDelegate{
     
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let sec = tableManager.sections[section]
+        print(sec.titleForHeader ?? "not exist")
         return sec.titleForHeader
     }
-    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let sec = tableManager.sections[section]
-        return sec.viewForHeader(tableView, section)
-    }
+//    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let sec = tableManager.sections[section]
+//        return sec.viewForHeader(tableView, section)
+//    }
 
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let sec = tableManager.sections[section]
+        print(sec.heightForHeader)
         return sec.heightForHeader
     }
     public func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
@@ -163,6 +165,8 @@ public class TableDelegate: NSObject, UITableViewDataSource,UITableViewDelegate{
         return false
     }
     public func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        guard sourceIndexPath != destinationIndexPath else { return }
+
         tableManager.editorManager?.moveRowAtSourceIndexPathToDestinationIndexPath(tableView,sourceIndexPath,destinationIndexPath)
     }
     
