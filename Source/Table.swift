@@ -14,12 +14,14 @@ struct MDTableConst{
 }
 public extension UITableView{    
     var manager:TableManager?{
-        get{
-            return objc_getAssociatedObject(self,MDTableConst.associatedKey) as? TableManager
-        }set{
+        get {
+            guard let associatedKey = MDTableConst.associatedKey else { return nil }
+            return objc_getAssociatedObject(self, associatedKey) as? TableManager
+        } set {
             asyncExecuteOnMain {
                 newValue?.bindTo(tableView: self)
-                objc_setAssociatedObject(self, MDTableConst.associatedKey, newValue, .OBJC_ASSOCIATION_RETAIN)
+                guard let associatedKey = MDTableConst.associatedKey else { return }
+                objc_setAssociatedObject(self, associatedKey, newValue, .OBJC_ASSOCIATION_RETAIN)
             }
         }
     }

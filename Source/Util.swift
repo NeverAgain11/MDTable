@@ -8,7 +8,7 @@
 
 import Foundation
 
-func asyncExecuteOnMain(_ block:@escaping (Void)->Void){
+func asyncExecuteOnMain(_ block:@escaping ()->Void){
     if Thread.isMainThread{
         block()
     }else{
@@ -18,7 +18,7 @@ func asyncExecuteOnMain(_ block:@escaping (Void)->Void){
     }
 }
 
-func syncExecuteOnMain(_ block:@escaping (Void)->Void){
+func syncExecuteOnMain(_ block:@escaping ()->Void){
     if Thread.isMainThread{
         block()
     }else{
