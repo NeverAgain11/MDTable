@@ -80,17 +80,15 @@ public class TableDelegate: NSObject, UITableViewDataSource,UITableViewDelegate{
     
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let sec = tableManager.sections[section]
-        print(sec.titleForHeader ?? "not exist")
         return sec.titleForHeader
     }
-//    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let sec = tableManager.sections[section]
-//        return sec.viewForHeader(tableView, section)
-//    }
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sec = tableManager.sections[section]
+        return sec.viewForHeader(tableView, section)
+    }
 
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let sec = tableManager.sections[section]
-        print(sec.heightForHeader)
         return sec.heightForHeader
     }
     public func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
