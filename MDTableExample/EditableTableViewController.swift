@@ -11,7 +11,7 @@ import MDTable
 
 class SwipteToDeleteRow: Row, EditableRow{
     var titleForDeleteConfirmationButton: String? = "Delete"
-    var editingStyle:UITableViewCellEditingStyle = UITableViewCellEditingStyle.delete
+    var editingStyle:UITableViewCell.EditingStyle = UITableViewCell.EditingStyle.delete
 }
 
 class SwipteToDeleteController: UITableViewController {
@@ -52,7 +52,7 @@ class SwipteToDeleteController: UITableViewController {
         reloadBarBarButton()
     }
     func reloadBarBarButton(){
-        let itemStyle = tableView.isEditing ? UIBarButtonSystemItem.done : UIBarButtonSystemItem.edit;
+        let itemStyle = tableView.isEditing ? UIBarButtonItem.SystemItem.done : UIBarButtonItem.SystemItem.edit;
         let rightItem = UIBarButtonItem(barButtonSystemItem: itemStyle, target: self, action: #selector(SwipteToDeleteController.handleEditing(_:)))
         navigationItem.rightBarButtonItem = rightItem
     }

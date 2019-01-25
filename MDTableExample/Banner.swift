@@ -53,7 +53,7 @@ class NMBannerRow : ReactiveRow, ParallexBannerDelegate, ParallexBannerDataSourc
 
 class NMBannerCell: MDTableViewCell {
     var bannerView:ParallexBanner!
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         bannerView = ParallexBanner(frame: self.bounds)
         contentView.addSubview(bannerView)

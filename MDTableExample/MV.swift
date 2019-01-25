@@ -40,7 +40,7 @@ struct NMMVConst {
 class NMMVCell: MDTableViewCell{
     var itemViews:[MVItemView] = []
     weak var row:NMMVRow?
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         for _ in 0..<4{
             let itemView = MVItemView(frame: CGRect.zero).added(to:contentView)

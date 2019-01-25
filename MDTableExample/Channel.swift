@@ -50,7 +50,7 @@ class NMChannelCell: MDTableViewCell {
     weak var row:NMChannelRow?
     var itemViews:[ChannelItemView] = []
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         for _ in 0..<6{
             let itemView = ChannelItemView(frame: CGRect.zero).added(to:contentView)

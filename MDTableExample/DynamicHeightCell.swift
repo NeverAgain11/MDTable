@@ -16,7 +16,7 @@ struct DynamicHeightCellConst{
 class DynamicHeightCell: MDTableViewCell {
     
     var customLabel: UILabel!
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         customLabel = UILabel(frame: self.contentView.bounds)
         customLabel.font = DynamicHeightCellConst.font

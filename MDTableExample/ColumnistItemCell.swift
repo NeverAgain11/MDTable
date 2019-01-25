@@ -69,7 +69,7 @@ class ColumnistItem{
         get{
             let graphStyle = NSMutableParagraphStyle()
             graphStyle.alignment = .natural
-            let attr1 = NSAttributedString(string: self.title, attributes: [NSParagraphStyleAttributeName: graphStyle])
+            let attr1 = NSAttributedString(string: self.title, attributes: [NSAttributedString.Key.paragraphStyle: graphStyle])
             return attr1
         }
     }

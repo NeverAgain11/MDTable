@@ -79,7 +79,7 @@ class NeteaseCloudMusicSortController: UITableViewController {
             }
         }
     }
-    func handleItemClicked(_ sender: UIBarButtonItem){
+    @objc func handleItemClicked(_ sender: UIBarButtonItem){
         self.delegate?.didFinishReorder(with: self.sections)
         dismiss(animated: true, completion: nil)
     }

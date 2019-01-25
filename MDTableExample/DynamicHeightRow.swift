@@ -13,7 +13,7 @@ class DynamicHeightRow: RowConvertable{
     //Protocol
     var rowHeight: CGFloat{
         get{
-            let attributes = [NSFontAttributeName: DynamicHeightCellConst.font]
+            let attributes = [NSAttributedString.Key.font: DynamicHeightCellConst.font]
             let size = CGSize(width: DynamicHeightCellConst.cellWidth, height: .greatestFiniteMagnitude)
             let height = (self.title as NSString).boundingRect(with: size,
                                                                options: [.usesLineFragmentOrigin],

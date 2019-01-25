@@ -40,7 +40,7 @@ public protocol RowConvertable {
 }
 
 extension RowConvertable{
-    public var cellStyle: UITableViewCellStyle {
+    public var cellStyle: UITableViewCell.CellStyle {
         return .default
     }
 

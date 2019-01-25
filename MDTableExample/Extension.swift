@@ -86,7 +86,7 @@ extension UIImageView{
 }
 
 extension UIButton{
-    func asyncSetImage(_ image:UIImage,for state:UIControlState){
+    func asyncSetImage(_ image:UIImage,for state:UIControl.State){
         DispatchQueue.global(qos: .userInteractive).async {
             let decodeImage = image.decodedImage()
             DispatchQueue.main.async {
@@ -156,7 +156,7 @@ extension UILabel{
 }
 
 extension UIButton{
-    func setBackgroundColor(_ color: UIColor, for state: UIControlState){
+    func setBackgroundColor(_ color: UIColor, for state: UIControl.State){
         let rect = CGRect(x: 0, y: 0, width: 1000, height: 1000)
         UIGraphicsBeginImageContext(rect.size)
         let ctx = UIGraphicsGetCurrentContext()

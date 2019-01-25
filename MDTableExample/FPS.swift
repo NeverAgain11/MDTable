@@ -16,13 +16,13 @@ class FPSLabel : UILabel{
     override init(frame: CGRect) {
         super.init(frame: frame)
         displayLink = CADisplayLink(target: self, selector: #selector(FPSLabel.handleDisplayLink(_:)))
-        displayLink.add(to: RunLoop.main, forMode: .commonModes)
+        displayLink.add(to: RunLoop.main, forMode: RunLoop.Mode.common)
         self.font = UIFont.systemFont(ofSize: 14)
         self.backgroundColor = UIColor(red: 60.0 / 255.0, green: 145.0 / 255.0, blue: 82.0 / 255.0, alpha: 1.0)
         self.textColor = UIColor.white
         self.textAlignment = .center
     }
-    func handleDisplayLink(_ sender:CADisplayLink){
+    @objc func handleDisplayLink(_ sender:CADisplayLink){
         guard lastTimeStamp != -1.0 else {
             lastTimeStamp = displayLink.timestamp
             return
@@ -41,6 +41,6 @@ class FPSLabel : UILabel{
         fatalError("init(coder:) has not been implemented")
     }
     deinit {
-        displayLink.remove(from: RunLoop.main, forMode: .commonModes)
+        displayLink.remove(from: RunLoop.main, forMode: RunLoop.Mode.common)
     }
 }

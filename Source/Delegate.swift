@@ -138,7 +138,7 @@ public class TableDelegate: NSObject, UITableViewDataSource,UITableViewDelegate{
         }
         return nil
     }
-    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
+    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
         tableManager.editorManager?.editingStyleCommitForRowAt(tableView, editingStyle, indexPath)
     }
     public func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
@@ -174,7 +174,7 @@ public class TableDelegate: NSObject, UITableViewDataSource,UITableViewDelegate{
     public func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
         tableManager.editorManager?.didEndEditingRowAt(tableView, indexPath)
     }
-    public func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+    public func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         let row = tableManager.row(at: indexPath)
         if let EditableRow = row as? EditableRow{
             return EditableRow.editingStyle

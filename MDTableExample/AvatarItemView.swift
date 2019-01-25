@@ -62,7 +62,7 @@ class AvatarItemView: UIView, UIGestureRecognizerDelegate {
         }
         return true
     }
-    func handleHight(_ sender: UILongPressGestureRecognizer){
+    @objc func handleHight(_ sender: UILongPressGestureRecognizer){
         switch sender.state {
         case .began,.changed:
             let location = sender.location(in: self)
@@ -72,11 +72,11 @@ class AvatarItemView: UIView, UIGestureRecognizerDelegate {
             avatarImageView.highLightCoverView.isHidden = true
         }
     }
-    func handleTap(_ sender: UITapGestureRecognizer){
+    @objc func handleTap(_ sender: UITapGestureRecognizer){
         print("Tap")
     }
     
-    func handleLongPress(_ sender: UILongPressGestureRecognizer){
+    @objc func handleLongPress(_ sender: UILongPressGestureRecognizer){
         if sender.state == .began{
             print("LongPress")
         }

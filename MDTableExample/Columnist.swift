@@ -25,7 +25,7 @@ class NeteaseColumnlistCell: MDTableViewCell{
     weak var row:NeteaseColumnlistRow?
     let section:Section = Section(rows: [])
     var itemViews:[ColumnistItemView] = []
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         for _ in 0..<3{
             let itemView = ColumnistItemView(frame: CGRect.zero).added(to:contentView)

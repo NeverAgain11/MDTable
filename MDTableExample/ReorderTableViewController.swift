@@ -11,7 +11,7 @@ import MDTable
 
 class ReorderRow: Row, EditableRow{
     var titleForDeleteConfirmationButton: String? = nil
-    var editingStyle:UITableViewCellEditingStyle = .none
+    var editingStyle:UITableViewCell.EditingStyle = .none
     var canMove: Bool = true
     var shouldIndentWhileEditing: Bool = false
 }

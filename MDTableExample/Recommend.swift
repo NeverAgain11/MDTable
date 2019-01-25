@@ -39,7 +39,7 @@ class NMRecommendCell: MDTableViewCell {
     weak var row:NMRecommendRow?
     var itemViews:[RecommendItemView] = []
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         for _ in 0..<6{
             let itemView = RecommendItemView(frame: CGRect.zero).added(to:contentView)

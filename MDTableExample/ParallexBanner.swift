@@ -162,7 +162,7 @@ public class ParallexBanner: UIView {
             return
         }
         self.timer = Timer(timeInterval: self.autoScrollTimeInterval, target: self, selector: #selector(ParallexBanner.scrollToNext), userInfo: nil, repeats: true)
-        RunLoop.main.add(self.timer!, forMode: .commonModes)
+        RunLoop.main.add(self.timer!, forMode: RunLoop.Mode.common)
     }
     func stopTimerIfNecessory(){
         if self.timer != nil{
@@ -282,7 +282,7 @@ public class BannerCell:UICollectionViewCell{
         scrollView.isUserInteractionEnabled = false
         
         scrollView.addSubview(imageView)
-        imageView.contentMode = UIViewContentMode.scaleAspectFill;
+        imageView.contentMode = UIView.ContentMode.scaleAspectFill;
         imageView.addSubview(textLabel)
         textLabel.font = UIFont.systemFont(ofSize: 10)
         textLabel.textColor = UIColor.white

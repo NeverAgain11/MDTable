@@ -35,7 +35,7 @@ class NeteaseCloudMusicController: UITableViewController,NeteaseCloudMusicSortCo
         }
     }
     
-    func showSortController(_ sender: UIBarButtonItem){
+    @objc func showSortController(_ sender: UIBarButtonItem){
         let sortableSections = sections.filter { $0 is SortableSection }.map{$0 as! SortableSection}
         let sortController = NeteaseCloudMusicSortController(sections: sortableSections)
         sortController.delegate = self

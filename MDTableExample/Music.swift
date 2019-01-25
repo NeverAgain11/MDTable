@@ -38,7 +38,7 @@ struct NMMusicConst {
 class NMMusicCell: MDTableViewCell {
     var itemViews:[MusicItemView] = []
     weak var row:NMLatestMusicRow?
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         for _ in 0..<6{
             let itemView = MusicItemView(frame: CGRect.zero).added(to:contentView)

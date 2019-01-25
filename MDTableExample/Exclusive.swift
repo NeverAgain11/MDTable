@@ -58,7 +58,7 @@ class NMExclusiveRow:ReactiveRow {
 class NMExclusiveCell:MDTableViewCell{
     weak var row:NMExclusiveRow?
     var itemViews:[ExclusiveItemView] = []
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         for _ in 0..<3{
             let itemView = ExclusiveItemView(frame: CGRect.zero).added(to:contentView)

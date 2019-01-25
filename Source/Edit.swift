@@ -10,7 +10,7 @@ import UIKit
 
 public protocol EditableRow {
     var titleForDeleteConfirmationButton:String? {get}
-    var editingStyle:UITableViewCellEditingStyle {get}
+    var editingStyle:UITableViewCell.EditingStyle {get}
     var canMove:Bool{ get }
 
     //These are optional
@@ -31,7 +31,7 @@ extension EditableRow{
 }
 
 public protocol Editor{
-    var editingStyleCommitForRowAt:(UITableView,UITableViewCellEditingStyle,IndexPath)->Void {get}
+    var editingStyleCommitForRowAt:(UITableView,UITableViewCell.EditingStyle,IndexPath)->Void {get}
     
     //These are optional
     var moveRowAtSourceIndexPathToDestinationIndexPath:(UITableView, IndexPath, IndexPath)->Void{ get }
@@ -59,7 +59,7 @@ extension Editor{
 
 
 open class TableEditor:Editor{
-    public var editingStyleCommitForRowAt: (UITableView, UITableViewCellEditingStyle, IndexPath) -> Void
+    public var editingStyleCommitForRowAt: (UITableView, UITableViewCell.EditingStyle, IndexPath) -> Void
     public var willBeginEditingRowAt:(UITableView, IndexPath) -> Void
     public var didEndEditingRowAt:(UITableView, IndexPath?) -> Void
     public var moveRowAtSourceIndexPathToDestinationIndexPath:(UITableView, IndexPath, IndexPath)->Void
