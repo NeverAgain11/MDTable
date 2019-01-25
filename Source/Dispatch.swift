@@ -40,7 +40,7 @@ public class TaskDispatcher{
     init(mode:TaskExecuteMode) {
         self.mode = mode
     }
-    public func add(_ identifier:String, _ block:@escaping (Void)->Void){
+    public func add(_ identifier:String, _ block:@escaping ()->Void){
         let task = Task(identifier,block)
         self.add(task)
     }
